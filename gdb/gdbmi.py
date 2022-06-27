@@ -69,7 +69,6 @@ class gdb():
         else: 
             comp = 'gcc -gstabs+ '+self.compilation+' '+file+' '+' -o '+file[:-2]
             res = subprocess.getoutput(comp)
-            print(res)
         if len(res) > 0: 
             if "warning" in res:
                 interface.show_message_warning(res)
